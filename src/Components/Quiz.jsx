@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import "./Quiz.css"
 
 const Quiz = () => {
     const { query } = useSelector((state) => state.quizReducer);
@@ -124,11 +125,11 @@ const Quiz = () => {
     }
 
     return (
-        <div>
-            <h1>Quiz</h1>
+        <div className="quizPage">
+            <h1 className="quizH1">Quiz</h1>
             <form onSubmit={QuizHandler}>
                 {quizrender}
-                <button className="mt-5 btn btn-primary">Submit</button>
+                <button className="btnSubmit">Submit</button>
             </form>
             {/* <p>{JSON.stringify(quiz)}</p> */}
         </div>
