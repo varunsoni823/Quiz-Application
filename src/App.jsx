@@ -4,9 +4,11 @@ import Home from "./Components/Home";
 import Config from "./Components/Config";
 import Quiz from "./Components/Quiz";
 
+import "./App.css"
 const App = () => {
     return (
-        <div className="container mt-5 p-5">
+        <div className="container">
+            
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/config" element={<Config />} />
